@@ -1,0 +1,136 @@
+//@import "_reset.scss";
+//$color: pink;
+//$amount: 10%;
+//%grid-test {
+//  background: darken($color, $amount);
+//  width: 300px;
+//  height: 300px;
+//}
+//
+//.test {
+//  @extend %grid-test;
+//}
+$color1:blue;
+$color2: pink;
+$color3: white;
+$width:100px;
+$height:600px;
+//.test1 {
+//  $amount: 40%;
+//  background: lighten($color1, $amount);
+//  width: $width;
+//  height: $height;
+//  .test2 {
+//    background: $color2;
+//    width: $width/2;
+//    height: $height/2;
+//    .test3 {
+//      background: $color3;
+//      width: $width/3;
+//      height: $height/3;
+//    }
+//  }
+//}
+//
+//$name: foo;
+//$attr: border;
+//p.#{$name} {
+//  border-width: 10px;
+//  border-style: solid;
+//  #{$attr}-color: blue;
+//}
+.cancel {
+  //  background: fade-out($color2, .3);
+  background: mix($color1, $color2, 30%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+.save {
+  @extend .cancel;
+  background: fade-in($color2, .7);
+}
+
+$grid-width: 40px;
+$gutter-width: 10px;
+@function button-width($n) {
+  @return $n*$grid-width + ($n - 1)*$gutter-width;
+}
+
+.cancel {
+  width: button-width(2);
+}
+
+@mixin large-text {
+  font: {
+    family: Arial;
+    size: 20px;
+    weight: bold;
+  }
+  color: mix($color1, $color2, 30%);
+}
+
+@mixin blue-border ($color, $width:1px) {
+  border: {
+    color: $color;
+    width: $width;
+    style: dashed;
+  }
+}
+
+$values: #ff0000,
+#00fe99,
+#0000ff;
+@mixin colors ($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}
+
+h2 {
+  @if 1+2==3 {
+    width: 200px;
+  }
+  @include colors ($values...);
+  @include large-text;
+  @include blue-border(blue);
+}
+
+@for $i from 1 through 3 {
+  .item-#{$i} {
+    width: 2px*$i;
+  }
+}
+
+$i: 6;
+@while $i>0 {
+  .item-#{$i} {
+    widyh: 2px*$i;
+  }
+  $i: $i - 2;
+}
+
+@each $week in monday,
+tuesday,
+wednesday,
+thursday {
+  .#{$week}-icon {
+    background-image: url('images/#{week}.png');
+  }
+}
+
+$x:0;
+@each $sprite in gray,
+yellow,
+red,
+blue {
+  .#{$sprite}-icon {
+    background: url(../image/sprite.png) #{$x}px 0px no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+  $x: $x - 16;
+}

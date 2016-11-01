@@ -1,0 +1,81 @@
+.cancel, .save {
+  background: #b286da;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px; }
+
+.save {
+  background: pink; }
+
+.cancel, .save {
+  width: 90px; }
+
+h2 {
+  width: 200px;
+  color: #ff0000;
+  background-color: #00fe99;
+  border-color: #0000ff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #b286da;
+  border-color: blue;
+  border-width: 1px;
+  border-style: dashed; }
+
+.item-1 {
+  width: 2px; }
+
+.item-2 {
+  width: 4px; }
+
+.item-3 {
+  width: 6px; }
+
+.item-6 {
+  widyh: 12px; }
+
+.item-4 {
+  widyh: 8px; }
+
+.item-2 {
+  widyh: 4px; }
+
+.monday-icon {
+  background-image: url("images/week.png"); }
+
+.tuesday-icon {
+  background-image: url("images/week.png"); }
+
+.wednesday-icon {
+  background-image: url("images/week.png"); }
+
+.thursday-icon {
+  background-image: url("images/week.png"); }
+
+.gray-icon {
+  background: url(../image/sprite.png) 0px 0px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px; }
+
+.yellow-icon {
+  background: url(../image/sprite.png) -16px 0px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px; }
+
+.red-icon {
+  background: url(../image/sprite.png) -32px 0px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px; }
+
+.blue-icon {
+  background: url(../image/sprite.png) -48px 0px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px; }
+
+/*# sourceMappingURL=style.css.map */
