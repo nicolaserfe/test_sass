@@ -1,81 +1,102 @@
-.cancel, .save {
-  background: #b286da;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 15px; }
+.cnt {
+  width: 1200px;
+  margin: 0 auto;
+  outline: solid 1px black; }
 
-.save {
-  background: pink; }
+.grid-row {
+  font-size: 0;
+  text-align: justify; }
+  .grid-row [class*='grid-step-column'] {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: 1px solid green; }
 
-.cancel, .save {
-  width: 90px; }
-
-h2 {
-  width: 200px;
-  color: #ff0000;
-  background-color: #00fe99;
-  border-color: #0000ff;
-  font-family: Arial;
-  font-size: 20px;
-  font-weight: bold;
-  color: #b286da;
-  border-color: blue;
-  border-width: 1px;
-  border-style: dashed; }
-
-.item-1 {
-  width: 2px; }
-
-.item-2 {
-  width: 4px; }
-
-.item-3 {
-  width: 6px; }
-
-.item-6 {
-  widyh: 12px; }
-
-.item-4 {
-  widyh: 8px; }
-
-.item-2 {
-  widyh: 4px; }
-
-.monday-icon {
-  background-image: url("images/week.png"); }
-
-.tuesday-icon {
-  background-image: url("images/week.png"); }
-
-.wednesday-icon {
-  background-image: url("images/week.png"); }
-
-.thursday-icon {
-  background-image: url("images/week.png"); }
-
-.gray-icon {
-  background: url(../image/sprite.png) 0px 0px no-repeat;
+.grid-row:after {
   display: inline-block;
-  width: 16px;
-  height: 16px; }
+  content: "";
+  width: 100%; }
 
-.yellow-icon {
-  background: url(../image/sprite.png) -16px 0px no-repeat;
-  display: inline-block;
-  width: 16px;
-  height: 16px; }
+.grid-step-column1 {
+  width: 6.25%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
 
-.red-icon {
-  background: url(../image/sprite.png) -32px 0px no-repeat;
-  display: inline-block;
-  width: 16px;
-  height: 16px; }
+.grid-step-column2 {
+  width: 12.5%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
 
-.blue-icon {
-  background: url(../image/sprite.png) -48px 0px no-repeat;
-  display: inline-block;
-  width: 16px;
-  height: 16px; }
+.grid-step-column3 {
+  width: 18.75%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column4 {
+  width: 25%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column5 {
+  width: 31.25%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column6 {
+  width: 37.5%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column7 {
+  width: 43.75%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column8 {
+  width: 50%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column9 {
+  width: 56.25%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column10 {
+  width: 62.5%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column11 {
+  width: 68.75%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column12 {
+  width: 75%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column13 {
+  width: 81.25%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column14 {
+  width: 87.5%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column15 {
+  width: 93.75%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
+
+.grid-step-column16 {
+  width: 100%;
+  outline: 1px solid darkblue;
+  background-color: lightblue; }
 
 /*# sourceMappingURL=style.css.map */

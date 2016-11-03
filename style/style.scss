@@ -1,3 +1,45 @@
+.cnt {
+  width: 1200px;
+  margin: 0 auto;
+  outline: solid 1px black;
+}
+
+.grid-row {
+  font-size: 0;
+  text-align: justify;
+  [class*='grid-step-column'] {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: 1px solid green;
+  }
+}
+
+.grid-row:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+}
+
+//    .grd-row1 {
+//      font-size: 0;
+//      text-align: justify;
+//      [class="grd-step-column2"] {
+//        font-size: 14px;
+//        display: inline-block;
+//        vertical-align: top;
+//        padding: 0 5px;
+//        box-sizing: border-box;
+//      }
+//    }
+//    
+//    .grd-row1:after {
+//      display: inline-block;
+//      content: "";
+//      width: 100%;
+//    }
 //@import "_reset.scss";
 //$color: pink;
 //$amount: 10%;
@@ -10,127 +52,226 @@
 //.test {
 //  @extend %grid-test;
 //}
-$color1:blue;
-$color2: pink;
-$color3: white;
-$width:100px;
-$height:600px;
-//.test1 {
-//  $amount: 40%;
-//  background: lighten($color1, $amount);
-//  width: $width;
-//  height: $height;
-//  .test2 {
-//    background: $color2;
-//    width: $width/2;
-//    height: $height/2;
-//    .test3 {
-//      background: $color3;
-//      width: $width/3;
-//      height: $height/3;
+//    $color1:blue;
+//    $color2: pink;
+//    $color3: white;
+//    $width:100px;
+//    $height:600px;
+//    //.test1 {
+//    //  $amount: 40%;
+//    //  background: lighten($color1, $amount);
+//    //  width: $width;
+//    //  height: $height;
+//    //  .test2 {
+//    //    background: $color2;
+//    //    width: $width/2;
+//    //    height: $height/2;
+//    //    .test3 {
+//    //      background: $color3;
+//    //      width: $width/3;
+//    //      height: $height/3;
+//    //    }
+//    //  }
+//    //}
+//    //
+//    //$name: foo;
+//    //$attr: border;
+//    //p.#{$name} {
+//    //  border-width: 10px;
+//    //  border-style: solid;
+//    //  #{$attr}-color: blue;
+//    //}
+//    .cancel {
+//      //  background: fade-out($color2, .3);
+//      background: mix($color1, $color2, 30%);
+//      color: #FFFFFF;
+//      border: none;
+//      border-radius: 15px;
+//      padding: 10px 15px;
 //    }
-//  }
-//}
-//
-//$name: foo;
-//$attr: border;
-//p.#{$name} {
-//  border-width: 10px;
-//  border-style: solid;
-//  #{$attr}-color: blue;
-//}
-.cancel {
-  //  background: fade-out($color2, .3);
-  background: mix($color1, $color2, 30%);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 15px;
-}
-
-.save {
-  @extend .cancel;
-  background: fade-in($color2, .7);
-}
-
-$grid-width: 40px;
-$gutter-width: 10px;
-@function button-width($n) {
-  @return $n*$grid-width + ($n - 1)*$gutter-width;
-}
-
-.cancel {
-  width: button-width(2);
-}
-
-@mixin large-text {
-  font: {
-    family: Arial;
-    size: 20px;
-    weight: bold;
+//    
+//    .save {
+//      @extend .cancel;
+//      background: fade-in($color2, .7);
+//    }
+//    
+//    $grid-width: 40px;
+//    $gutter-width: 10px;
+//    @function button-width($n) {
+//      @return $n*$grid-width + ($n - 1)*$gutter-width;
+//    }
+//    
+//    .cancel {
+//      width: button-width(2);
+//    }
+//    
+//    @mixin large-text {
+//      font: {
+//        family: Arial;
+//        size: 20px;
+//        weight: bold;
+//      }
+//      color: mix($color1, $color2, 30%);
+//    }
+//    
+//    @mixin blue-border ($color, $width:1px) {
+//      border: {
+//        color: $color;
+//        width: $width;
+//        style: dashed;
+//      }
+//    }
+//    
+//    $values: #ff0000,
+//    #00fe99,
+//    #0000ff;
+//    @mixin colors ($text, $background, $border) {
+//      color: $text;
+//      background-color: $background;
+//      border-color: $border;
+//    }
+//    
+//    h2 {
+//      @if 1+2==3 {
+//        width: 200px;
+//      }
+//      @include colors ($values...);
+//      @include large-text;
+//      @include blue-border(blue);
+//    }
+//    
+//    @for $i from 1 through 3 {
+//      .item-#{$i} {
+//        width: 2px*$i;
+//      }
+//    }
+//    
+//    $i: 6;
+//    @while $i>0 {
+//      .item-#{$i} {
+//        widyh: 2px*$i;
+//      }
+//      $i: $i - 2;
+//    }
+//    
+//    @each $week in monday,
+//    tuesday,
+//    wednesday,
+//    thursday {
+//      .#{$week}-icon {
+//        background-image: url('images/#{week}.png');
+//      }
+//    }
+//    $x:0;
+//    @each $sprite in gray,
+//    yellow,
+//    red,
+//    blue {
+//      .#{$sprite}-icon {
+//        background: url(../image/sprite.png) #{$x}px 0px no-repeat;
+//        display: inline-block;
+//        width: 16px;
+//        height: 16px;
+//      }
+//      $x: $x - 16;
+// }
+//    $x:0;
+//    $y:0;
+//    $arr:one,
+//    two,
+//    three,
+//    four,
+//    five,
+//    six,
+//    seven,
+//    eight;
+//    @each $sprite in $arr {
+//      .#{$sprite}-icon {
+//        background: url(../image/sprite.png) #{$x}px #{$y}px no-repeat;
+//        display: inline-block;
+//        width: 16px;
+//        height: 16px;
+//      }
+//      @if $x==-64 {
+//        $x: 16;
+//        $y: $y - 16;
+//      }
+//      $x: $x - 16;
+//    }
+//    
+//    //      span[lang] {
+//    //      color: firebrick;
+//    //    }
+//    //
+//    span[lang='pt'] {
+//      color: forestgreen;
+//    }
+//    
+//    span[lang~="en-us"] {
+//      color: navy;
+//    }
+//    
+//    span[lang|="zh"] {
+//      color: grey;
+//    }
+//    
+//    a[href^="#"] {
+//      color: black;
+//    }
+//    
+//    a[href$=".cn"] {
+//      color: firebrick;
+//    }
+//    
+//    a[href*="example"] {
+//      color: yellow;
+//    }
+//    
+//    $base-columns-amount: 16;
+//    @for $i from 1 through $base-columns-amount {
+//      $min-column-width: 100%/$i;
+//      .grd-fill-column#{$i} {
+//        width: $min-column-width;
+//        outline: 1px solid purple;
+//        background-color: thistle;
+//      }
+//    }
+$base-columns-amount: 16;
+@for $i from 1 through $base-columns-amount {
+  $min-column-width-step: 100% / $base-columns-amount;
+  .grid-step-column#{$i} {
+    width: $min-column-width-step * $i;
+    outline: 1px solid darkblue;
+    background-color: lightblue;
   }
-  color: mix($color1, $color2, 30%);
 }
 
-@mixin blue-border ($color, $width:1px) {
-  border: {
-    color: $color;
-    width: $width;
-    style: dashed;
-  }
-}
-
-$values: #ff0000,
-#00fe99,
-#0000ff;
-@mixin colors ($text, $background, $border) {
-  color: $text;
-  background-color: $background;
-  border-color: $border;
-}
-
-h2 {
-  @if 1+2==3 {
-    width: 200px;
-  }
-  @include colors ($values...);
-  @include large-text;
-  @include blue-border(blue);
-}
-
-@for $i from 1 through 3 {
-  .item-#{$i} {
-    width: 2px*$i;
-  }
-}
-
-$i: 6;
-@while $i>0 {
-  .item-#{$i} {
-    widyh: 2px*$i;
-  }
-  $i: $i - 2;
-}
-
-@each $week in monday,
-tuesday,
-wednesday,
-thursday {
-  .#{$week}-icon {
-    background-image: url('images/#{week}.png');
-  }
-}
-
-$x:0;
-@each $sprite in gray,
-yellow,
-red,
-blue {
-  .#{$sprite}-icon {
-    background: url(../image/sprite.png) #{$x}px 0px no-repeat;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-  }
-  $x: $x - 16;
-}
+//    
+//    .grd-row {
+//      font-size: 0;
+//      [class="grd-step-column8"] {
+//        font-size: 14px;
+//        display: inline-block;
+//        vertical-align: top;
+//        padding: 0 5px;
+//        box-sizing: border-box;
+//      }
+//    }
+//    
+//    .grd-row1 {
+//      font-size: 0;
+//      text-align: justify;
+//      [class="grd-step-column2"] {
+//        font-size: 14px;
+//        display: inline-block;
+//        vertical-align: top;
+//        padding: 0 5px;
+//        box-sizing: border-box;
+//      }
+//    }
+//    
+//    .grd-row1:after {
+//      display: inline-block;
+//      content: "";
+//      width: 100%;
+//    }
