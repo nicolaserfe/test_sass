@@ -1,19 +1,18 @@
-.cnt {
-  width: 1200px;
-  margin: 0 auto;
-  outline: solid 1px black;
+$base-columns-amount: 16;
+@for $i from 1 through $base-columns-amount {
+  $min-column-width-step: 100% / $base-columns-amount;
+  .grid-step-column#{$i} {
+    width: $min-column-width-step * $i;
+  }
 }
 
-.grid-row {
-  font-size: 0;
-  text-align: justify;
-  [class*='grid-step-column'] {
-    font-size: 14px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 5px;
-    box-sizing: border-box;
-    outline: 1px solid green;
+.cnt {
+  max-width: 1200px;
+  margin: 0 auto;
+  outline: solid 1px black;
+  .grid-row {
+    font-size: 0;
+    text-align: justify;
   }
 }
 
@@ -23,6 +22,74 @@
   width: 100%;
 }
 
+[class*='grid-step-column'] {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  box-sizing: border-box;
+  outline: 1px solid green;
+}
+
+img {
+  width: 80px;
+  height: 50px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 10px;
+  margin: 0;
+  li.notlink {
+    color: blue;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.header {
+  text-align: justify;
+  padding: 40px;
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin: 5px 0px 0px 5px;
+  }
+}
+
+div.button {
+  margin: 10px 0px;
+  font-weight: 700;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 3px;
+  background: blue;
+  float: left;
+}
+
+@media screen and (max-width:1000px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+//project grid grid grid  grid grid grid  grid grid grid  grid grid grid
+//////////////////////////////////////////////05 november 2016 media screen//////////////
+//.media-test {
+//  height: 200px;
+//  max-width: 600px;
+//  background: chocolate;
+//}
+//
+//@media screen and (max-width: 400px) {
+//  .media-test {
+//    background: yellow;
+//  }
+//}
 //    .grd-row1 {
 //      font-size: 0;
 //      text-align: justify;
@@ -236,16 +303,15 @@
 //        background-color: thistle;
 //      }
 //    }
-$base-columns-amount: 16;
-@for $i from 1 through $base-columns-amount {
-  $min-column-width-step: 100% / $base-columns-amount;
-  .grid-step-column#{$i} {
-    width: $min-column-width-step * $i;
-    outline: 1px solid darkblue;
-    background-color: lightblue;
-  }
-}
-
+//$base-columns-amount: 16;
+//@for $i from 1 through $base-columns-amount {
+//  $min-column-width-step: 100% / $base-columns-amount;
+//  .grid-step-column#{$i} {
+//    width: $min-column-width-step * $i;
+//    outline: 1px solid darkblue;
+//    //    background-color: lightblue;
+//  }
+//}
 //    
 //    .grd-row {
 //      font-size: 0;
